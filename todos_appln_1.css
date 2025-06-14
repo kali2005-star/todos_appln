@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f39c12;
+    --success-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --background-color: #f5f6fa;
+    --card-background: #ffffff;
+    --text-primary: #2c3e50;
+    --text-secondary: #7f8c8d;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.todos-bg-container {
+    padding: 32px 16px;
+    min-height: 100vh;
+}
+
+.todo-header {
+    text-align: center;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.todo-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.todos-heading {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.todo-card, .todo-list-card {
+    background: var(--card-background);
+    border-radius: 15px;
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: var(--shadow);
+}
+
+.create-task-heading, .todo-items-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+}
+
+.create-task-heading-subpart, .todo-items-heading-subpart {
+    color: var(--primary-color);
+}
+
+.input-group {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.todo-user-input {
+    flex: 1;
+    padding: 16px;
+    border: 2px solid #e4e7eb;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.todo-user-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.add-todo-button, .save-todo-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-todo-button:hover, .save-todo-button:hover {
+    background: #357abd;
+}
+
+.save-todo-button {
+    background: var(--success-color);
+    margin-top: 16px;
+}
+
+.save-todo-button:hover {
+    background: #27ae60;
+}
+
+.todo-items-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-item-container {
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-input {
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+.label-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background: transparent;
+    border: none;
+}
+
+.checkbox-label {
+    font-size: 18px;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 8px;
+}
+
+.delete-icon-container {
+    padding: 8px;
+}
+
+.delete-icon {
+    color: var(--danger-color);
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.delete-icon:hover {
+    color: #c0392b;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .todos-heading {
+        font-size: 40px;
+    }
+
+    .create-task-heading, .todo-items-heading {
+        font-size: 28px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .add-todo-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .todo-card, .todo-list-card {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .todos-heading {
+        font-size: 32px;
+    }
+
+    .todo-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .create-task-heading, .todo-items-heading {
+        font-size: 24px;
+    }
+
+    .todo-user-input {
+        font-size: 14px;
+    }
+}
