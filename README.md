@@ -117,12 +117,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Fonts provided by [Google Fonts](https://fonts.google.com/)
 - Design inspiration from modern todo applications
 
-## Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
-
-Project Link: [https://github.com/yourusername/todos-application](https://github.com/yourusername/todos-application)
-
----
 
 ⭐️ If you like this project, please give it a star on GitHub! 
